@@ -51,12 +51,7 @@ func main() {
 		}
 	}
 
-	if (strings.Contains(tmp,"</example>")) {
-		parse=false
-		break
-	}
-
-	if (strings.Contains(tmp,"<example>")) {
+	if (parse == false && strings.Contains(tmp,"<example>")) {
 		parse=true
 		tmp=""
 	}
