@@ -43,7 +43,8 @@ func main() {
 	tmp+=string(str[i])  // if use buffer or builder can be better...
 	if (parse) {
 		if(str[i] == '<' && str[i+1] == '/' && str[i+2] == 'e'){ 
-			parse=true
+			parse=false
+			break
 		}
 		if (parse) {
 			result+=string(str[i])
